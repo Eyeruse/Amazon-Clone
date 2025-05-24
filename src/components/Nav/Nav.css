@@ -1,0 +1,27 @@
+/* Outer nav bar ==> Makes the background dark and adds padding. */ 
+.nav-bar {
+  background-color: #232f3e;  /* dark Amazon blue */
+  color: white;
+  padding: 10px 20px;
+}
+
+/* The row of links ==> Displays the links in a horizontal row. */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  flex-wrap: wrap;  /* wrap on smaller screens */
+}
+
+/* Each clickable item */
+.nav-links span {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Adds a yellow hover effect like Amazon. */
+.nav-links span:hover {
+  color: #febd69;  /* Amazon yellow on hover */
+
+}
