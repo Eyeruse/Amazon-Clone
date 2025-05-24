@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
 import Nav from '../../components/Nav/Nav'
+// import Carousel from '../../components/Carousel/Carousel';
 
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
     <div>
       <Header />
       <Nav />
+      {/* <Carousel /> */}
 
     </div>
   );
