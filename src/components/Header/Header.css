@@ -1,3 +1,4 @@
+/* Base header styling */
 .amazon-header {
   display: flex;
   justify-content: space-between;
@@ -6,13 +7,16 @@
   color: white;
   padding: 10px 20px;
   font-family: Arial, sans-serif;
+  flex-wrap: wrap;
 }
 
+/* Logo and location section */
 .header-left,
 .header-center,
 .header-right {
   display: flex;
   align-items: center;
+  margin: 5px 0;
 }
 
 .logo {
@@ -39,10 +43,12 @@
   line-height: 1;
 }
 
+/* Search bar */
 .header-center {
   flex: 1;
   max-width: 600px;
   margin: 0 20px;
+  min-width: 300px;
 }
 
 .header-center select {
@@ -66,12 +72,19 @@
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.header-center button:hover {
+  background-color: #f3a847;
+}
+
+/* Right-side section */
 .header-right {
   display: flex;
   gap: 20px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-right .flag {
@@ -84,6 +97,11 @@
   text-decoration: none;
   color: white;
   font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.header-right a:hover {
+  color: #febd69;
 }
 
 .header-right a div {
@@ -96,6 +114,7 @@
   font-weight: bold;
 }
 
+/* Cart styling */
 .cart {
   display: flex;
   align-items: center;
@@ -114,3 +133,22 @@
   font-weight: bold;
 }
 
+/* Responsive: Stack on small screens */
+@media (max-width: 768px) {
+  .amazon-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-left,
+  .header-center,
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .header-center {
+    order: 3;
+  }
+}
